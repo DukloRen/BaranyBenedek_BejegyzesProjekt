@@ -116,5 +116,30 @@ namespace BejegyzesProjekt
             }
             Console.WriteLine($"A 15-nél kevesebb likeot kapott bejegyzések száma: {szamlalo}");
         }
+        public void Atrendezes()
+        {
+            for (int i = 0; i < lista.Count; i++)
+            {
+                for (int j = 0; j < lista.Count; j++)
+                {
+                    if (lista[i].Likeok > lista[j].Likeok)
+                    {
+                        Bejegyzes p = lista[i];
+                        lista[i] = lista[j];
+                        lista[j] = p;
+                    }
+                }
+            }
+            for (int i = 0; i < lista.Count; i++)
+            {
+                Console.WriteLine(lista[i].ToString());
+            }
+            StreamWriter iro = new StreamWriter("bejegyzesek_rendezett.txt");
+            for (int i = 0; i < lista.Count; i++)
+            {
+                iro.WriteLine(lista[i].ToString());
+            }
+            iro.Close();
+        }
     }
 }

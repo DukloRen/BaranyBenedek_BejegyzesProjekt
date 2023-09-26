@@ -19,6 +19,7 @@ namespace BejegyzesProjekt
             p.Legnepszerubb();
             p.HarmincotLike();
             p.KevesebbTizenot();
+            p.Atrendezes();
             Console.ReadKey();
         }
     }
