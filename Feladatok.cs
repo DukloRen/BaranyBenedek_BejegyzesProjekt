@@ -48,5 +48,19 @@ namespace BejegyzesProjekt
             }
             olvaso.Close();
         }
+        public void Veletlenszeru()
+        {
+            Random rnd = new Random();
+            int szamok;
+            for (int i = 0; i < lista.Count*20; i++)
+            {
+                szamok = rnd.Next(0, lista.Count);
+                lista[szamok].Like();
+            }
+            for (int i = 0; i < lista.Count; i++)
+            {
+                Console.WriteLine(lista[i].ToString());
+            }
+        }
     }
 }
