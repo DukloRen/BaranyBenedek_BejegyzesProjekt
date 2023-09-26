@@ -13,6 +13,7 @@ namespace BejegyzesProjekt
         {
             Feladatok p=new Feladatok();
             p.ListaEgy();
+            p.Feltoltes();
             Console.ReadKey();
         }
     }

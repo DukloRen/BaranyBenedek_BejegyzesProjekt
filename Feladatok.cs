@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace BejegyzesProjekt
 {
@@ -33,6 +34,19 @@ namespace BejegyzesProjekt
                     lista.Add(bejegyzesx);
                 }
             }
+        }
+        public void Feltoltes()
+        {
+            StreamReader olvaso = new StreamReader("bejegyzesek.csv");
+            while (!olvaso.EndOfStream)
+            {
+                string[] sorok = olvaso.ReadLine().Split(';');
+                string szerzo = sorok[0];
+                string tartalom = sorok[1];
+                Bejegyzes p = new Bejegyzes(szerzo, tartalom);
+                lista2.Add(p);
+            }
+            olvaso.Close();
         }
     }
 }
