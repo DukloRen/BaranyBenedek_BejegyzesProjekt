@@ -85,5 +85,24 @@ namespace BejegyzesProjekt
             }
             Console.WriteLine($"A legnépszerűbb bejegyzés likejainak száma: {max}");
         }
+        public void HarmincotLike()
+        {
+            bool vane = false;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (lista[i].Likeok>35)
+                {
+                    vane = true;
+                }
+            }
+            if (vane==true)
+            {
+                Console.WriteLine("Van olyan bejegyzés ami 35-nél több likeot kapott!");
+            }
+            else
+            {
+                Console.WriteLine("Nincs olyan bejegyzés ami 35-nél több likeot kapott!");
+            }
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace BejegyzesProjekt
         private int likeok;
         private DateTime letrejott;
         private DateTime szerkesztve;
+        private bool szerkesztvex;
 
         public Bejegyzes(string szerzo, string tartalom)
         {
@@ -22,10 +23,18 @@ namespace BejegyzesProjekt
             this.likeok = 0;
             this.letrejott = DateTime.Now;
             this.szerkesztve = DateTime.Now;
+            this.szerkesztvex = false;
         }
 
         public string Szerzo { get => szerzo;}
-        public string Tartalom { get => tartalom; set => tartalom = value; }
+        public string Tartalom{ get => tartalom;
+            set
+            {
+                tartalom = value;
+                szerkesztve = DateTime.Now;
+                szerkesztvex = true;
+            }
+        }
         public int Likeok { get => likeok;}
         public DateTime Letrejott { get => letrejott;}
         public DateTime Szerkesztve { get => szerkesztve;}
@@ -35,8 +44,8 @@ namespace BejegyzesProjekt
         }
         public override string ToString()
         {
-            string tostring = $"{this.szerzo}-{this.likeok}-{this.letrejott}";
-            if (this.szerkesztve!=this.letrejott)
+            string tostring = $"\n{this.szerzo}-{this.likeok}-{this.letrejott}";
+            if (this.szerkesztvex==true)
             {
                 tostring += $"\nSzerkesztve: {this.szerkesztve}";
             }
