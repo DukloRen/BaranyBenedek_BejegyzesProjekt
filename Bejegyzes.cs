@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace oop_doga
+namespace BejegyzesProjekt
 {
     class Bejegyzes
     {
@@ -14,7 +14,7 @@ namespace oop_doga
         private DateTime letrejott;
         private DateTime szerkesztve;
 
-        public Bejegyzes(string szerzo, string tartalom, int likeok, DateTime letrejott, DateTime szerkesztve)
+        public Bejegyzes(string szerzo, string tartalom)
         {
             this.szerzo = szerzo;
             this.tartalom = tartalom;

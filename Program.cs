@@ -11,6 +11,8 @@ namespace BejegyzesProjekt
     {
         static void Main(string[] args)
         {
+            Feladatok p=new Feladatok();
+            p.ListaEgy();
             Console.ReadKey();
         }
     }
