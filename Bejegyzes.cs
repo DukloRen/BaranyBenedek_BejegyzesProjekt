@@ -32,5 +32,16 @@ namespace oop_doga
         {
             this.likeok++;
         }
+        public override string ToString()
+        {
+            string tostring = $"{this.szerzo}-{this.likeok}-{this.letrejott}";
+            if (this.szerkesztve!=this.letrejott)
+            {
+                tostring += $"\nSzerkesztve: {this.szerkesztve}";
+            }
+            tostring += $"\n{this.tartalom}";
+
+            return tostring;
+        }
     }
 }
