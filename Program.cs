@@ -15,6 +15,7 @@ namespace BejegyzesProjekt
             p.ListaEgy();
             p.Feltoltes();
             p.Veletlenszeru();
+            p.Szovegmodositas();
             Console.ReadKey();
         }
     }
