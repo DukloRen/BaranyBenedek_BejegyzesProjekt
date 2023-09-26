@@ -73,5 +73,17 @@ namespace BejegyzesProjekt
                 Console.WriteLine(lista2[i].ToString());
             }
         }
+        public void Legnepszerubb()                     //melyik listából?
+        {
+            int max = int.MinValue;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (max<lista[i].Likeok)
+                {
+                    max = lista[i].Likeok;
+                }
+            }
+            Console.WriteLine($"A legnépszerűbb bejegyzés likejainak száma: {max}");
+        }
     }
 }
