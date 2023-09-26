@@ -68,7 +68,10 @@ namespace BejegyzesProjekt
             Console.WriteLine("Kérem írjon be egy szöveget!");
             ujszoveg = Console.ReadLine();
             lista2[1].Tartalom = ujszoveg;
-            lista2.ToString();
+            for (int i = 0; i < lista2.Count; i++)
+            {
+                Console.WriteLine(lista2[i].ToString());
+            }
         }
     }
 }
