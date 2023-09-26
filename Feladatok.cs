@@ -104,5 +104,17 @@ namespace BejegyzesProjekt
                 Console.WriteLine("Nincs olyan bejegyzés ami 35-nél több likeot kapott!");
             }
         }
+        public void KevesebbTizenot()
+        {
+            int szamlalo = 0;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (lista[i].Likeok < 15)
+                {
+                    szamlalo++;
+                }
+            }
+            Console.WriteLine($"A 15-nél kevesebb likeot kapott bejegyzések száma: {szamlalo}");
+        }
     }
 }

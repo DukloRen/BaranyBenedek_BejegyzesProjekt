@@ -18,6 +18,7 @@ namespace BejegyzesProjekt
             p.Szovegmodositas();
             p.Legnepszerubb();
             p.HarmincotLike();
+            p.KevesebbTizenot();
             Console.ReadKey();
         }
     }
